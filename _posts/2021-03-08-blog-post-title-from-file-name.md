@@ -1,32 +1,16 @@
-## Blog Post Title From First Header
+#How one Password Vault Mistake Could Expose All Your Accounts
+#By: Austin Gomez
+## Blog post reposted from pwnpaladin.blog with permission of the copyright owners.
 
-Due to a plugin called `jekyll-titles-from-headings` which is supported by GitHub Pages by default. The above header (in the markdown file) will be automatically used as the pages title.
+Almost anyone who uses a computer or other device with an operating system will require passwords in order to gain access to the resources on the device or on the internet. For many of us, including myself, it can often be a challenging endeavor to remember all of our passwords, and the challenge of securing our passwords becomes even more trivial when we want to avoid reusing the same passwords for many of our different accounts. There are a few ways to go about tackling this challenge if you are not someone with top-notch memorization skills. You could write the passwords down on a piece of paper, or you can use what is called password vaults. A password vault is essentially a utility that is either hosted locally on your device or is connected to the wider internet. It allows you to securely store your passwords on it. You can then lock it with a master password. While password vaults can be invaluable tools to keep a list of passwords for your various accounts there also comes risks with using them. We will look at the risk of single points of failures and how you can pick the right password vault that is the most secure for your endeavors.
 
-If the file does not start with a header, then the post title will be derived from the filename.
+As mentioned above, one of the biggest issues with password vaults is the risk of there being a single point of failure. What a single point of failure means is that if your master password is compromised then that means an attacker now has access to all of your other passwords. Through this, they can get into other systems and cause havoc. It is really important that when you look into different password vaults that you evaluate what methods that they use for authentication. You do not want to use a vault that simply requires only a master password for several reasons. First, if you lose the password then you won’t be able to access your password vault. Second, if an attacker gains access to your master password then they can gain access
+Risk of online password vaults: You might think that an online password vault is better but you should put your guard down when using them. While it is true that an online vault will have the security for the most part on their side there can still be breaches that occur. In fact, breaches are not uncommon with password vaults and have happened as recently as 2022. One notable breach involved LastPass where attackers were able to gain access to customer vault data that includes various amounts of Personable Identifiable Information.
 
-This is a sample blog post. You can talk about all sorts of fun things here.
+Picking the right password vault If you are looking for a password vault then consider vaults that enable multi-factor authentication. These are vaults that specifically offer more than just a password to gain access. It could include a text message with a six digit code to gain access, or a authenticator software that generates a number. If you use one of these vaults then if an attacker gains access to your master password you will have another barrier for them to go through which is the second level of authentication.
 
----
+Another thing you want to look for is whether the vault uses end-to-end encryption. What this means is that your passwords get encrypted on your device before they get sent to the vault’s servers. This way even if the company gets breached, your passwords are still protected because they are stored in a format that can only be decrypted with your master password.
 
-### This is a header
+You should also consider whether you want a local vault or a cloud-based one. Local vaults store everything on your device which gives you more control but if your device breaks or gets stolen then you could lose everything unless you have backups. Cloud-based vaults let you access your passwords from anywhere but you are trusting a company with your data which as we have seen can be risky.
 
-#### Some T-SQL Code
-
-```tsql
-SELECT This, [Is], A, Code, Block -- Using SSMS style syntax highlighting
-    , REVERSE('abc')
-FROM dbo.SomeTable s
-    CROSS JOIN dbo.OtherTable o;
-```
-
-#### Some PowerShell Code
-
-```powershell
-Write-Host "This is a powershell Code block";
-
-# There are many other languages you can use, but the style has to be loaded first
-
-ForEach ($thing in $things) {
-    Write-Output "It highlights it using the GitHub style"
-}
-```
+Final thoughts: Password vaults are great tools to use for storing your passwords and other information. In fact, I argue that these applications help to increase good cyber hygiene practices as it reduces the habit of reusing passwords across multiple applications for many people. However, like any software product, there are potential security concerns that one needs to be aware of. Make sure your master password is something strong that you do not use anywhere else and keep your vault software updated. While there is always going to be some risk involved, using a good password vault is one of the best ways to keep your accounts secure without having to memorize dozens of different passwords.
